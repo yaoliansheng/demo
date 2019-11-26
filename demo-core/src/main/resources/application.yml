@@ -20,29 +20,39 @@ spring:
     druid:
       username: ${DATABASE_DRUID_USERNAME:admin}
       password: ${DATABASE_DRUID_PASSWORD:hd123}
+    # 数据库版本控制
+ flyway:
+      enabled: true
+      # 若连接的数据库非空库，是否初始化
+      baseline-on-migrate: true
+      # 是否开启校验
+      validate-on-migrate: false
+      # 默认脚本加载路径：/db/migration
+    # locations=classpath:/db/migration
 
 #mybatis
 mybatis:
   mapper-locations: classpath*:mybatis/*.xml
   type-aliases-package: com.example.demo.core.entity
 
-#pagehelper\u5206\u9875\u63D2\u4EF6
+#pagehelper分页插件
 pagehelper:
   helperDialect: mysql
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
 
-# \u914D\u7F6E\u65E5\u5FD7\u7EA7\u522B\uFF0C\u8BA9hibernate\u6253\u5370\u51FA\u6267\u884C\u7684SQL
+# 配置日志级别，让hibernate打印出执行的SQL
 logging:
   config: classpath:logback.xml
   level:
     root: INFO
     com.qianfan123.sail.inf.client: DEBUG
   feignClient:
-    #\u65E5\u5FD7\u7EA7\u522B\uFF1ANONE, BASIC, HEADERS, FULL
+    #日志级别：NONE, BASIC, HEADERS, FULL
     level: ${LOGGING_FEIGNCLIENT_LEVEL:BASIC}
 
-#\u7EBF\u4E0A\u6539\u4E3Afalse \uFF0C\u5C06\u4E0D\u5C55\u793Aswagger\u63A5\u53E3\u5177\u4F53\u4FE1\u606F
+#swagger 是否展示
 swagger:
       show: true
+
