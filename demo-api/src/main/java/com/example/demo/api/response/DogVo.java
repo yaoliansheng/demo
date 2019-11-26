@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * @author yaoliansheng
  * @ClassName DogVo
- * @Description 测试
+ * @Description
  * @Date 2019/11/26 12:41
  * @Version 1.0
  */
