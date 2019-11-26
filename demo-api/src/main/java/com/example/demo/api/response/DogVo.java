@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * @author yaoliansheng
  * @ClassName DogVo
- * @Description
+ * @Description 测试
  * @Date 2019/11/26 12:41
  * @Version 1.0
  */
@@ -20,4 +20,6 @@ public class DogVo {
     private String type;
 
     private String high;
+
+    private String status;
 }
