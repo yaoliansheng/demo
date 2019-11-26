@@ -25,7 +25,8 @@ public enum ReturnCodeEnum {
     COUPON_CHANGE_OWNER_NOT_SUPPORT("7105", "券不支持转赠"),
     COUPON_CHANGE_OWNER_REACH_CEILING("7106", "券转赠达到上限"),
     COUPON_NOT_FOUND("7107", "获取券信息失败"),
-    COUPON_STOCK_NOT_ENOUGH("8000", "券库存不足");
+    COUPON_STOCK_NOT_ENOUGH("8000", "券库存不足"),
+    DB_ERROR("0800", "数据库操作异常");
     /**
      * The value.
      */
